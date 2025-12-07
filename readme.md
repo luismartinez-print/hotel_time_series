@@ -91,7 +91,7 @@ Let’s take a first look at how this data looks like and make ourselves
 an idea with what we are working.
 
 ``` r
-plot(
+plot_1 <- plot(
   data_ts,
   main = 'Hotel Weekly Sales',
   xlab = 'Time',
@@ -111,7 +111,13 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-4-1.jpeg)<!-- -->
+
+``` r
+plot_1
+```
+
+    ## NULL
 
 The first thing that we can observe is a strong volatility of this hotel
 reservations through the year.
@@ -135,7 +141,7 @@ seasonplot(data_ts,
            ylim = c(0,1600))
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-5-1.jpeg)<!-- -->
 
 Now we can observe more clearly that spike in the last weeks going 400
 above average, however we can also see the downward spike for the first
@@ -148,7 +154,7 @@ very random, and no clear seasonality so far.
 Acf(data_ts, bty= 'n')
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-6-1.jpeg)<!-- -->
 
 With this lag autocorrelation graph, we can clearly see a long
 dependency in what happened in the weeks before. It also reasures the
@@ -357,7 +363,7 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-10-1.jpeg)<!-- -->
 
 We can clearly see that the red line closely resembles the training data
 with the values in the middle being exactly the same! IN the
@@ -417,7 +423,7 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-14-1.jpeg)<!-- -->
 
 Overall the model is not great, we overestimate. We are still over the
 limit of the confidence level however, this problem begs another model
@@ -504,7 +510,7 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-18-1.jpeg)<!-- -->
 
 We can see that both lines tend to capture the signal very well of the
 model but it has a very hard time to understand the peak that it
@@ -676,7 +682,7 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-25-1.jpeg)<!-- -->
 
 These two models seem to fit way better the training data but we still
 need to find out how it performs in the forecasting and validation set.
@@ -749,7 +755,7 @@ legend('topleft',
        lwd = c(1,2))
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-29-1.jpeg)<!-- -->
 
 Although the Neural Network fits perfectly, we see that it needs a lot
 of data before it can start training, therefore we will not include in
@@ -1078,7 +1084,7 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-39-1.jpeg)<!-- -->
 
 We can clearly see that our Ensemble Models have very wild guesses for
 the first data points, but seems to rectify themselves as more data is
@@ -1122,7 +1128,7 @@ legend(
 )
 ```
 
-![](readme_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-41-1.jpeg)<!-- -->
 
 # Next Steps
 
