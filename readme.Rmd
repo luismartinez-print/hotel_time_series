@@ -3,27 +3,14 @@ title: "Hotel Time Series Analysis"
 author: "Luis Martinez"
 output: 
   github_document:
-    fig_width: 5
-    fig_height: 5
+    fig_width: 8
+    fig_height: 8
     dev: jpeg
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  echo = TRUE,
-```
-
-
-```{r setup, include=FALSE}
-```
-
-
-```{r setup, include=FALSE}
-```
-
-
-```{r setup, include=FALSE}
-fig.path = "my_images/"
+  echo = TRUE,fig.path = "my_images/"
 )
 ```
 # Problem Frame Work
